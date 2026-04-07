@@ -1,0 +1,184 @@
+========================================================
+  PEOPLE'S HEALTH CARE — SYSTEM NAVIGATION GUIDE
+  Hospital Management System — Complete User Manual
+========================================================
+
+This guide covers every page, feature, and workflow in the
+People's Health Care system for all user roles.
+
+--------------------------------------------------------
+  GENERAL — ALL USERS
+--------------------------------------------------------
+
+LANDING PAGE  (/)
+- Public landing page visible to anyone without login.
+- Shows hospital information, doctor profile, and features.
+- Two buttons: "Login"  |   "Register Now"
+
+PATIENT REGISTRATION
+- Only PATIENTS can self-register.
+- Fill in: Full Name, Email, Password, Gender, Date of Birth, Phone.
+- After registration, you are automatically redirected
+  Login page  you can type username and password after that click sign in button
+
+LOGIN  (/login)
+- All users (patients and staff) log in here with email and password.
+
+LOGOUT
+- Click the Logout button in the bottom-left of the sidebar on
+  any dashboard page.
+- You are redirected to login.
+
+COMPLETE PROFILE  (/complete-profile)
+- First-time patients may be prompted to complete their profile
+  before accessing all features.
+
+
+========================================================
+  PATIENT PORTAL  (Role: patient)
+========================================================
+
+SIDEBAR NAVIGATION:
+  My Dashboard       → /patient/dashboard
+  My Appointments    → /patient/appointments
+  My Prescriptions   → /patient/prescriptions
+  Lab Results        → /patient/lab-results
+  Billing & Payments → /patient/billing
+  My Profile         → /patient/profile
+
+
+── PATIENT DASHBOARD  (/patient/dashboard) ─────────────
+
+The main overview page after login. Shows:
+- Welcome banner with your name and quick links.
+- Stat cards: Upcoming Appointments, Active Prescriptions,
+  Lab Reports Ready, Pending Bill.
+- Quick action buttons: "Book Appointment", "Edit Profile".
+- Recent appointment summary.
+- Profile details card (Blood Group, Age, Conditions, Allergies).
+
+
+── MY APPOINTMENTS  (/patient/appointments) ─────────────
+
+VIEWING APPOINTMENTS:
+- All your appointments are listed with:
+    Channeling number, Date, Time, Type, Reason, Status.
+- Status values: Confirmed, Scheduled, Completed, Cancelled.
+- Use the filter tabs to view: All / Upcoming / Completed / Cancelled.
+
+BOOKING AN APPOINTMENT:
+1. Click the "Book Appointment" button (top right).
+2. A booking modal opens.
+3. Select appointment type (General Consultation / Follow-up / etc.).
+4. Enter the reason for visit.
+5. Choose a date from the calendar.
+6. Choose an available time slot (greyed-out slots are already booked).
+7. Review booking summary — a channeling number will be assigned
+   automatically on confirmation.
+8. Click "Confirm Booking".
+9. Appointment appears in your list with status "Scheduled".
+Note: Arrive 10 minutes before your scheduled time.
+
+RESCHEDULING AN APPOINTMENT:
+- Find the appointment and click "Reschedule".
+- Choose a new date and time slot.
+- Confirm — the system updates the channeling number if needed.
+
+CANCELLING AN APPOINTMENT:
+- Find the appointment and click "Cancel".
+- Cancellation must be done before the consultation time.
+- Status changes to "Cancelled".
+- The system automatically reorders channeling numbers for
+  remaining patients.
+
+
+── MY PRESCRIPTIONS  (/patient/prescriptions) ───────────
+
+- Lists all prescriptions issued by your doctor.
+- Each prescription shows:
+    Prescription ID (e.g. RX-2026-0001), Doctor name, Date,
+    Medication list with name, dosage, and duration.
+    Pharmacy status: Pending / Dispensed / Cancelled.
+- Prescriptions are automatically created by the doctor and sent
+  to the pharmacy — you do not need to do anything.
+- Once the pharmacy dispenses the medicines, status updates to
+  "Dispensed" here automatically.
+
+
+── LAB RESULTS  (/patient/lab-results) ──────────────────
+
+- Shows all lab tests requested for you by your doctor.
+- Each test shows:
+    Test name, Requested date, Status, and Results when available.
+- Status values: Pending / In Progress / Completed.
+- Once the lab technician uploads results, they appear here
+  automatically — you will see the report.
+- You will receive a notification about test preparation
+  (e.g., fasting instructions) when a test is requested.
+
+
+── BILLING & PAYMENTS  (/patient/billing) ───────────────
+
+- View all bills generated for your visits.
+- Each bill includes:
+    Consultation fee, Medicine costs, Lab test fees, Total amount.
+- Payment status: Paid / Unpaid.
+- Payment is made in person using Cash or Card.
+- The cashier updates the payment status manually after you pay.
+
+
+── MY PROFILE  (/patient/profile) ───────────────────────
+
+- View and edit your personal information:
+    Name, Email, Phone, Gender, Date of Birth.
+- View medical info: Blood Group, Known Allergies, Medical Conditions.
+- Upload or change profile photo.
+- Change password.
+
+========================================================
+  SYSTEM RULES & IMPORTANT NOTES
+========================================================
+
+ROLE SEPARATION:
+- Each user can only access their own role's pages.
+- Attempting to visit another role's URL redirects to your dashboard.
+
+PRESCRIPTION FLOW (end-to-end):
+  1. Doctor issues prescription during consultation.
+  2. Prescription auto-appears in pharmacy queue as "Pending".
+  3. Pharmacist reviews: links drugs, sets qty, checks availability.
+  4. Pharmacist dispenses: stock auto-deducted, status → "Dispensed".
+  5. Patient sees "Dispensed" status in My Prescriptions.
+  6. Cashier generates bill including medicine costs.
+  7. Patient pays in person — cashier marks as "Paid".
+
+LAB TEST FLOW (end-to-end):
+  1. Doctor requests lab test (during new prescription creation).
+  2. Test appears automatically in lab queue as "Pending".
+  3. Lab technician processes test → updates to "In Progress".
+  4. Lab technician uploads results → status becomes "Completed".
+  5. Doctor views results in Lab Requests page.
+  6. Patient views results in Lab Results page.
+
+CHANNELING NUMBERS:
+- Assigned automatically when an appointment is booked.
+- Sequential per day (001, 002, 003...).
+- If an earlier appointment is cancelled, numbers for remaining
+  patients are adjusted automatically.
+
+STOCK MANAGEMENT:
+- Stock is automatically deducted when pharmacy dispenses medicines.
+- Low stock alert triggers when stockQty ≤ reorderLevel.
+- Out of stock alert triggers when stockQty = 0.
+- Pharmacy dashboard bell icon shows live stock alerts.
+
+MEDICAL ADVICE DISCLAIMER:
+- This system does NOT provide medical diagnosis or treatment advice.
+- The system helps navigate the hospital platform only.
+- For any medical questions about symptoms, diseases, or treatments,
+  please consult your doctor directly.
+
+========================================================
+  END OF NAVIGATION GUIDE
+  People's Health Care Hospital Management System
+========================================================
